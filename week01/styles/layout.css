@@ -55,6 +55,7 @@ nav {
 	background: rgb(27, 27, 27);
 	grid-column: 3 / 4;
 	padding: 10px;
+	color: white;
 }
 
 footer {
