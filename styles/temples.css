@@ -69,25 +69,3 @@ footer {
 	padding: 1rem;
 	margin-top: 1rem;
 }
-
-@media (min-width: 768px) {
-	nav ul {
-		flex-direction: row;
-		justify-content: center;
-	}
-
-	nav ul li {
-		border-bottom: none;
-		margin: 0 1rem;
-	}
-
-	main {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 1rem;
-	}
-
-	figure {
-		margin: 0;
-	}
-}
