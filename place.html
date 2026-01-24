@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Nigeria - Place Project</title>
+		<meta name="description" content="A webpage about Nigeria, featuring its data and weather information." />
+		<meta name="author" content="John Joshua" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="styles/place.css" />
+		<script src="scripts/place.js" defer></script>
+	</head>
+	<body>
+		<header>
+			<h1>Nigeria</h1>
+		</header>
+		<main>
+			<div class="hero">
+				<picture>
+					<source srcset="images/newabuja11.webp" media="(min-width: 1000px)" />
+					<source srcset="images/newabuja11.webp" media="(min-width: 600px)" />
+					<img src="images/abuja22.webp" alt="Nigeria landscape" width="500" height="250" />
+				</picture>
+				<section class="data">
+					<h2>Data</h2>
+					<ul>
+						<li><strong>Area:</strong> 923,769 km²</li>
+						<li><strong>Population:</strong> 218.5 Million</li>
+						<li><strong>Capital:</strong> Abuja</li>
+						<li><strong>Languages:</strong> English (Official)</li>
+						<li><strong>Currency:</strong> Naira (₦)</li>
+						<li><strong>Time Zone:</strong> UTC+1</li>
+						<li><strong>Calling Code:</strong> +234</li>
+						<li><strong>Internet TLD:</strong> .ng</li>
+					</ul>
+				</section>
+				<section class="weather">
+					<h2>Weather</h2>
+					<img src="images/weather.svg" alt="Weather Icon" class="weather-icon" />
+					<div class="weather-info">
+						<p><strong>Temperature:</strong> <span id="temp">9</span>°C</p>
+						<p><strong>Conditions:</strong> Harmattan</p>
+						<p><strong>Wind:</strong> <span id="wind">10</span> km/h</p>
+						<p><strong>Wind Chill:</strong> <span id="windchill">N/A</span></p>
+					</div>
+				</section>
+			</div>
+		</main>
+		<footer>
+			<p>&copy; <span id="currentyear"></span> | Your Name | Nigeria</p>
+			<p>Last Modified: <span id="lastModified"></span></p>
+		</footer>
+	</body>
+</html>
