@@ -120,14 +120,6 @@ footer {
 		text-align: left;
 	}
 
-	.weather-icon {
-		display: none;
-	}
-
-	.weather h2::after {
-		content: '☀️';
-	}
-
 	.data li {
 		justify-content: flex-start;
 		gap: 1rem;
