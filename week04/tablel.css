@@ -45,3 +45,11 @@ th {
 tbody tr:nth-child(even) {
 	background-color: var(--zebra);
 }
+.blank {
+	background-color: var(--foredark);
+}
+thead {
+    color: #fff;
+    background: #000;
+}
+
