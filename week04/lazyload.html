@@ -4,17 +4,24 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Lazy Loading</title>
-		<link rel="stylesheet" href="lazyload.css" />
-		<script src="lazyload.js"></script>
+		<link rel="stylesheet" href="styles/lazyload.css" />
+		<script src="scripts/lazyload.js"></script>
 	</head>
 	<body>
-		<h1>Lazy Loading Images Example</h1>
-		<p>This page demonstrates lazy loading of images using the loading="lazy" attribute.</p>
-		<picture> <img src="../images/face1.jpg" alt="image" loading="lazy" width="400px" height="500px" /> </picture>
-		<picture> <img src="../images/face2.jpg" alt="image" loading="lazy" width="400px" height="500px" /></picture>
-		<picture> <img src="../images/face3.jpg" alt="image" loading="lazy" width="400px" height="500px" /></picture>
-		<picture> <img src="../images/face4.jpg" alt="image" loading="lazy" width="400px" height="500px" /></picture>
-		<picture> <img src="../images/face5.jpg" alt="image" loading="lazy" width="400px" height="500px" /></picture>
-		<picture> <img src="../images/face6.jpg" alt="image" loading="lazy" width="400px" height="500px" /></picture>
+		<header>
+			<h1>Lazy Loading Images Example</h1>
+			<p>This page demonstrates lazy loading of images using the loading="lazy" attribute.</p>
+		</header>
+
+		<picture> <img src="../images/face1.jpg" alt="image" loading="lazy" width="400" height="500" /> </picture>
+		<picture> <img src="../images/face2.jpg" alt="image" loading="lazy" width="400" height="500" /></picture>
+		<picture> <img src="../images/face3.jpg" alt="image" loading="lazy" width="400" height="500" /></picture>
+		<picture> <img src="../images/face4.jpg" alt="image" loading="lazy" width="400" height="500" /></picture>
+		<picture> <img src="../images/face5.jpg" alt="image" loading="lazy" width="400" height="500" /></picture>
+		<picture> <img src="../images/face6.jpg" alt="image" loading="lazy" width="400" height="500" /></picture>
 	</body>
+	<footer>
+		<p>© <span id="currentyear"></span> John Joshua - Lagos, Nigeria</p>
+		<p id="lastModified"></p>
+	</footer>
 </html>

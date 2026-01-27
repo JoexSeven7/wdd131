@@ -1,0 +1,39 @@
+header {
+	background-color: rgba(16, 16, 21, 0.859);
+	color: bisque;
+	padding: 1.5rem;
+	text-align: center;
+}
+
+h1 {
+	text-align: center;
+}
+
+main {
+	margin: 0 auto;
+	width: 400px;
+	display: flex;
+	flex-direction: column;
+}
+
+img {
+	margin: 20px 0;
+	width: 100%;
+	height: auto;
+	animation: fade 15s;
+}
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+footer {
+	background-color: rgba(16, 16, 21, 0.859);
+	color: bisque;
+	padding: 1.5rem;
+	text-align: center;
+}
