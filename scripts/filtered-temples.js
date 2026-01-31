@@ -7,96 +7,84 @@ const temples = [
 		location: 'Aba, Nigeria',
 		dedicated: '2005, August, 7',
 		area: 11500,
-		imageUrl:
-			'https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg',
+		imageUrl: 'images/aba.jpg',
 	},
 	{
 		templeName: 'Manti Utah',
 		location: 'Manti, Utah, United States',
 		dedicated: '1888, May, 21',
 		area: 74792,
-		imageUrl:
-			'https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg',
+		imageUrl: 'images/manti.jpg',
 	},
 	{
 		templeName: 'Payson Utah',
 		location: 'Payson, Utah, United States',
 		dedicated: '2015, June, 7',
 		area: 96630,
-		imageUrl:
-			'https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg',
+		imageUrl: 'images/payson.jpg',
 	},
 	{
 		templeName: 'Yigo Guam',
 		location: 'Yigo, Guam',
 		dedicated: '2020, May, 2',
 		area: 6861,
-		imageUrl:
-			'https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg',
+		imageUrl: 'images/yigo.jpg',
 	},
 	{
 		templeName: 'Washington D.C.',
 		location: 'Kensington, Maryland, United States',
 		dedicated: '1974, November, 19',
 		area: 156558,
-		imageUrl:
-			'https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg',
+        imageUrl: 'images/washington.jpg',
 	},
 	{
 		templeName: 'Lima Perú',
 		location: 'Lima, Perú',
 		dedicated: '1986, January, 10',
 		area: 9600,
-		imageUrl:
-			'https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg',
-	},
+		imageUrl: 'images/lima-peru.jpg',
+    },
 	{
 		templeName: 'Mexico City Mexico',
 		location: 'Mexico City, Mexico',
 		dedicated: '1983, December, 2',
 		area: 116642,
-		imageUrl:
-			'https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg',
+		imageUrl: 'images/albuquerque.jpg',
 	},
 	{
 		templeName: 'Bogotá Colombia',
 		location: 'Carrera Bogotá, Distrito Capital Colombia',
 		dedicated: '1999, April, 24',
 		area: 53500,
-		imageUrl:
-			'https://churchofjesuschristtemples.org/assets/img/temples/bogota-colombia-temple/bogota-colombia-temple-7733-main.jpg',
+		imageUrl: 'images/bogota.jpg',
 	},
 	{
 		templeName: 'Tokyo Japan',
 		location: 'Tokyo, Japan',
 		dedicated: '1980, October, 27',
 		area: 53000,
-		imageUrl:
-			'https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/tokyo-japan/400x250/tokyo-japan-temple-lds-86844-wallpaper.jpg',
+		imageUrl: 'images/tokyo.jpg',
 	},
 	{
 		templeName: 'Sydney Australia',
 		location: 'Sydney, Australia',
 		dedicated: '1984, September, 20',
 		area: 30657,
-		imageUrl:
-			'https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/sydney-australia/400x250/sydney-australia-temple-lds-1027920-wallpaper.jpg',
+		imageUrl: 'images/sydney.jpg',
 	},
 	{
 		templeName: 'Paris France',
 		location: 'Paris, France',
 		dedicated: '2017, May, 21',
 		area: 32600,
-		imageUrl:
-			'https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/paris-france/400x250/paris-france-temple-lds-1170067-wallpaper.jpg',
+		imageUrl: 'images/paris.jpg',
 	},
 	{
-		templeName: 'Kiev Ukraine',
-		location: 'Kiev, Ukraine',
+		templeName: 'Barcelona Spain',
+		location: 'Barcelona, Spain',
 		dedicated: '2010, August, 23',
 		area: 25800,
-		imageUrl:
-			'https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/kyiv-ukraine/400x250/kyiv-ukraine-temple-lds-1169863-wallpaper.jpg',
+		imageUrl: 'images/barcelona.jpg',
 	},
 ];
 
