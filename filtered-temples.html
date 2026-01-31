@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="A collection of temple photographs showcasing architectural wonders from around the world." />
+		<meta name="author" content="John Joshua" />
+		<title>Temple Album - Filtered</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="styles/filtered-temples.css" />
+		<link rel="stylesheet" href="styles/filtered-temples-large.css" />
+		<script defer src="scripts/filtered-temples.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>Temple Album</h1>
+			<div class="hamburger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="#" data-filter="home">Home</a></li>
+					<li><a href="#" data-filter="old">Old</a></li>
+					<li><a href="#" data-filter="new">New</a></li>
+					<li><a href="#" data-filter="large">Large</a></li>
+					<li><a href="#" data-filter="small">Small</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main id="temple-grid">
+			<!-- Temple cards will be dynamically generated here -->
+		</main>
+		<footer>
+			<p>&copy; <span id="year"></span> | John Joshua | WDD 131 | Last Modified: <span id="lastModified"></span></p>
+		</footer>
+	</body>
+</html>
