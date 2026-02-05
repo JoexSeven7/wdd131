@@ -35,7 +35,7 @@ const temples = [
 		location: 'Kensington, Maryland, United States',
 		dedicated: '1974, November, 19',
 		area: 156558,
-        imageUrl: 'images/washington.jpg',
+		imageUrl: 'images/washington.jpg',
 	},
 	{
 		templeName: 'Lima Perú',
@@ -43,7 +43,7 @@ const temples = [
 		dedicated: '1986, January, 10',
 		area: 9600,
 		imageUrl: 'images/lima-peru.jpg',
-    },
+	},
 	{
 		templeName: 'Mexico City Mexico',
 		location: 'Mexico City, Mexico',
@@ -264,8 +264,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	const navLinks = document.querySelectorAll('nav ul li a');
 	navLinks.forEach((link) => {
 		link.addEventListener('focus', function () {
-			this.style.outline = '2px solid #3498db';
-			this.style.outlineOffset = '2px';
+			this.style.outline = ' #16222a';
+			this.style.outlineOffset = '1px';
 		});
 
 		link.addEventListener('blur', function () {

@@ -11,7 +11,7 @@ body {
 	font-family: 'Inter', sans-serif;
 	line-height: 1.6;
 	color: #333;
-	background-color: #f8f9fa;
+	background-color: #d6d8da;
 }
 
 /* Header Styles */
@@ -60,7 +60,7 @@ nav a {
 
 nav a:hover,
 nav a.active {
-	background-color: #3498db;
+	background-color: #435662;
 }
 
 /* Main Content */
@@ -99,18 +99,18 @@ main {
 
 .temple-info p {
 	font-size: 0.9rem;
-	color: #666;
+	color: #e74c3c;
 	margin-bottom: 0.25rem;
 }
 
 .temple-info .dedicated {
 	font-weight: 700;
-	color: #3498db;
+	color: #034e7f;
 }
 
 .temple-info .area {
 	font-weight: 700;
-	color: #e74c3c;
+	color: #034e7f;
 }
 
 /* Footer */
