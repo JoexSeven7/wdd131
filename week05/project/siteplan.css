@@ -1,0 +1,157 @@
+/* Site Plan - The Red Gold Hub (TRGH) */
+/* Color Schema */
+/* Soft Cream: #F9F5E7 - Background */
+/* Deep Charcoal: #2C3333 - Primary Text */
+/* Sage Leaf: #5F8D4E - Buttons */
+/* Honey Gold: #E7B10A - Highlights */
+/* Muted Gray: #707070 - Secondary Text */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	background-color: #f9f5e7;
+	color: #2c3333;
+	line-height: 1.6;
+}
+
+header {
+	background-color: #f9f5e7;
+	color: #2c3333;
+	padding: 2rem;
+	text-align: center;
+}
+
+header h1 {
+	font-family: 'Playfair Display', serif;
+	font-size: 2.5rem;
+	margin-bottom: 0.5rem;
+}
+
+header h2 {
+	font-family: 'Playfair Display', serif;
+	font-size: 1.5rem;
+	color: #2c3333;
+}
+
+nav {
+	background-color: #517147;
+	padding: 1rem;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+}
+
+nav a {
+	color: #f9f5e7;
+	text-decoration: none;
+	font-weight: 700;
+	padding: 0.5rem 1rem;
+	border-radius: 4px;
+	transition: background-color 0.3s;
+}
+
+nav a:hover {
+	background-color: #e7b10a;
+	color: #2c3333;
+}
+
+main {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 2rem;
+}
+
+section {
+	margin-bottom: 2.5rem;
+	padding: 1.5rem;
+	background-color: #f1efe6;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h3 {
+	font-family: 'Playfair Display', serif;
+	font-size: 1.75rem;
+	color: #517147;
+	margin-bottom: 1rem;
+	border-bottom: 2px solid #e7b10a;
+	padding-bottom: 0.5rem;
+}
+
+section p {
+	margin-bottom: 0.75rem;
+	color: #2c3333;
+}
+
+section strong {
+	color: #517147;
+	font-size: 1.2rem;
+}
+
+#color-schema p span {
+	display: inline-block;
+	width: 100px;
+	height: 24px;
+	vertical-align: middle;
+	margin-right: 0.5rem;
+
+	border-radius: 3px;
+}
+
+#color-schema p {
+	display: flex;
+	align-items: center;
+}
+
+#wireframes img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 1rem 0;
+	border: 2px solid #517147;
+	border-radius: 8px;
+}
+
+#wireframes p {
+	text-align: center;
+	font-weight: 700;
+	color: #517147;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+	header h1 {
+		font-size: 2rem;
+	}
+
+	header h2 {
+		font-size: 1.2rem;
+	}
+
+	nav ul {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	main {
+		padding: 1rem;
+	}
+
+	section {
+		padding: 1rem;
+	}
+
+	section h3 {
+		font-size: 1.5rem;
+	}
+}
