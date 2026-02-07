@@ -118,6 +118,22 @@ select, input[type="text"], input[type="date"], textarea {
     border: 1px solid var(--border-color);
 }
 
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.feature-item label {
+    margin: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.feature-item input {
+    cursor: pointer;
+}
+
 input[type="submit"] {
     display: block;
     width: 100%;
