@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation</title>
+    <meta name="description" content="Review Confirmation Page for WDD 131">
+    <link rel="stylesheet" href="form.css">
+    <script src="review.js" defer></script>
+    <style>
+        .confirmation-msg {
+            text-align: center;
+            padding: 3rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-top: 2rem;
+        }
+        .counter-display {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Review Submitted</h1>
+    </header>
+    <main>
+        <div class="confirmation-msg">
+            <h2>Thank You!</h2>
+            <p>Your product review has been successfully submitted.</p>
+            <div class="counter-display">
+                Total Reviews Completed: <span id="reviewCount">0</span>
+            </div>
+            <p style="margin-top: 2rem;"><a href="form.html" style="color: var(--accent-color);">Submit another review</a></p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Your Name | Location</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
