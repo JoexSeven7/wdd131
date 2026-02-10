@@ -1,0 +1,152 @@
+/* ============================================
+   The Red Gold Hub (TRGH) - Medium Screen CSS
+   Mobile Landscape & Tablet (600px - 1023px)
+   ============================================ */
+
+/* Typography adjustments */
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.75rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+/* Header & Navigation */
+.site-header .container {
+	flex-direction: row;
+}
+
+.main-nav ul {
+	gap: var(--spacing-sm);
+}
+
+.main-nav a {
+	padding: var(--spacing-xs) var(--spacing-sm);
+	font-size: 0.9rem;
+}
+
+/* Hamburger menu hidden on medium screens */
+.hamburger {
+	display: none;
+}
+
+.main-nav {
+	display: block;
+}
+
+/* Hero Section */
+.hero {
+	padding: var(--spacing-xxl) 0;
+}
+
+.hero h1 {
+	font-size: 2.5rem;
+}
+
+.hero p {
+	font-size: 1.125rem;
+}
+
+/* Grid layouts - 2 columns */
+.grid-2 {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: var(--spacing-md);
+}
+
+.grid-3 {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: var(--spacing-md);
+}
+
+.grid-4 {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: var(--spacing-md);
+}
+
+/* Cards */
+.card {
+	padding: var(--spacing-lg);
+}
+
+/* Timeline */
+.timeline::before {
+	left: 15px;
+}
+
+.timeline-item {
+	padding-left: 50px;
+}
+
+.timeline-item::before {
+	left: 6px;
+}
+
+/* Tables */
+.table-wrapper {
+	overflow-x: auto;
+}
+
+.data-table {
+	min-width: 600px;
+}
+
+/* Forms */
+.form-row {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: var(--spacing-md);
+}
+
+/* Footer */
+.site-footer .container {
+	flex-direction: row;
+	text-align: left;
+}
+
+/* Buttons */
+.btn {
+	width: auto;
+}
+
+/* Feature cards with images */
+.feature-card {
+	display: flex;
+	flex-direction: column;
+}
+
+.feature-card img {
+	order: -1;
+}
+
+/* Stats section */
+.stats-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: var(--spacing-md);
+}
+
+/* Hero image adjustments */
+.hero-image {
+	max-height: 300px;
+	object-fit: cover;
+}
+
+/* Navigation dropdown for smaller tablets */
+@media (max-width: 768px) {
+	.main-nav ul {
+		gap: var(--spacing-xs);
+	}
+
+	.main-nav a {
+		font-size: 0.85rem;
+		padding: var(--spacing-xs);
+	}
+}

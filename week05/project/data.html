@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Explore comprehensive data on Nigeria's palm oil supply gap, production statistics, import data, and market potential for investors and stakeholders." />
+		<meta name="author" content="John Joshua" />
+		<title>Supply Data - The Red Gold Hub (TRGH)</title>
+
+		<!-- Preconnect to Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
+			rel="stylesheet" />
+
+		<!-- CSS Stylesheets -->
+		<link rel="stylesheet" href="styles/base.css" />
+		<link rel="stylesheet" href="styles/small.css" media="(max-width: 599px)" />
+		<link rel="stylesheet" href="styles/medium.css" media="(min-width: 600px) and (max-width: 1023px)" />
+		<link rel="stylesheet" href="styles/large.css" media="(min-width: 1024px)" />
+
+		<!-- JavaScript -->
+		<script defer src="scripts/main.js"></script>
+		<script defer src="scripts/data.js"></script>
+	</head>
+
+	<body>
+		<!-- Skip Link for Accessibility -->
+		<a href="#main-content" class="skip-link">Skip to main content</a>
+
+		<!-- Header -->
+		<header class="site-header">
+			<div class="container">
+				<a href="index.html" class="site-logo">TR<span>GH</span></a>
+				<div class="hamburger" aria-label="Toggle navigation menu" role="button" tabindex="0">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<nav class="main-nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="history.html">History</a></li>
+						<li><a href="data.html" class="active" aria-current="page">Supply Data</a></li>
+						<li><a href="technology.html">Technology</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<!-- Main Content -->
+		<main id="main-content">
+			<!-- Page Header -->
+			<section class="hero">
+				<div class="container">
+					<h1>Nigeria's Palm Oil Supply Data</h1>
+					<p>
+						Comprehensive analysis of production, consumption, and import statistics. Understand the market dynamics
+						and investment opportunities in Nigeria's palm oil sector.
+					</p>
+				</div>
+			</section>
+
+			<!-- Key Metrics Dashboard -->
+			<section class="container">
+				<div class="section-header">
+					<h2>Current Supply Gap Analysis</h2>
+				</div>
+				<div class="stats-grid">
+					<div class="card text-center">
+						<h3 class="text-highlight" id="production-metric">1.2M</h3>
+						<p>Annual Production (Metric Tons)</p>
+						<p class="text-secondary">Domestic output</p>
+					</div>
+					<div class="card text-center">
+						<h3 class="text-highlight" id="consumption-metric">1.7M</h3>
+						<p>Annual Consumption (Metric Tons)</p>
+						<p class="text-secondary">Domestic demand</p>
+					</div>
+					<div class="card text-center">
+						<h3 class="text-highlight" id="deficit-metric">500K</h3>
+						<p>Supply Deficit (Metric Tons)</p>
+						<p class="text-secondary">Import requirement</p>
+					</div>
+					<div class="card text-center">
+						<h3 class="text-highlight" id="import-cost-metric">$6B</h3>
+						<p>Annual Import Cost</p>
+						<p class="text-secondary">Foreign exchange outflow</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Interactive Data Filter -->
+			<section class="container">
+				<div class="card">
+					<h2>Filter Data by Year</h2>
+					<p>Select a year to view detailed production and import statistics:</p>
+					<div class="form-group">
+						<label for="year-filter">Select Year:</label>
+						<select id="year-filter" aria-label="Filter data by year">
+							<option value="all">All Years</option>
+							<option value="2023">2023</option>
+							<option value="2022">2022</option>
+							<option value="2021">2021</option>
+							<option value="2020">2020</option>
+							<option value="2019">2019</option>
+							<option value="2018">2018</option>
+						</select>
+					</div>
+					<div id="filtered-data-display" class="card" style="background-color: var(--color-background); margin-top: 1rem;">
+						<p>Select a year to view detailed statistics.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Production vs Import Table -->
+			<section class="container">
+				<div class="section-header">
+					<h2>Production vs Import Statistics</h2>
+				</div>
+				<div class="table-wrapper">
+					<table class="data-table" id="production-table">
+						<thead>
+							<tr>
+								<th>Year</th>
+								<th>Production (MT)</th>
+								<th>Consumption (MT)</th>
+								<th>Imports (MT)</th>
+								<th>Import Cost (USD)</th>
+								<th>Gap (MT)</th>
+							</tr>
+						</thead>
+						<tbody id="production-table-body">
+							<!-- Data will be populated by JavaScript -->
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			<!-- Regional Production Data -->
+			<section class="container">
+				<div class="section-header">
+					<h2>Regional Production Distribution</h2>
+				</div>
+				<div class="grid-2">
+					<div class="card">
+						<h3>Top Producing States</h3>
+						<table class="data-table">
+							<thead>
+								<tr>
+									<th>State</th>
+									<th>Production (MT)</th>
+									<th>% of National</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Akwa Ibom</td>
+									<td>285,000</td>
+									<td>24%</td>
+								</tr>
+								<tr>
+									<td>Rivers</td>
+									<td>210,000</td>
+									<td>18%</td>
+								</tr>
+								<tr>
+									<td>Delta</td>
+									<td>180,000</td>
+									<td>15%</td>
+								</tr>
+								<tr>
+									<td>Edo</td>
+									<td>150,000</td>
+									<td>13%</td>
+								</tr>
+								<tr>
+									<td>Bayelsa</td>
+									<td>120,000</td>
+									<td>10%</td>
+								</tr>
+								<tr>
+									<td>Others</td>
+									<td>255,000</td>
+									<td>20%</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="card">
+						<h3>Production by Sector</h3>
+						<table class="data-table">
+							<thead>
+								<tr>
+									<th>Sector</th>
+									<th>Production (MT)</th>
+									<th>% of Total</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Smallholder Farmers</td>
+									<td>840,000</td>
+									<td>70%</td>
+								</tr>
+								<tr>
+									<td>Medium Estates</td>
+									<td>240,000</td>
+									<td>20%</td>
+								</tr>
+								<tr>
+									<td>Large Plantations</td>
+									<td>120,000</td>
+									<td>10%</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+
+			<!-- Import Sources -->
+			<section class="container">
+				<div class="section-header">
+					<h2>Major Import Sources</h2>
+				</div>
+				<div class="grid-3">
+					<div class="card text-center">
+						<h3 class="text-highlight">Malaysia</h3>
+						<p>60% of Imports</p>
+						<p>300,000 MT annually</p>
+						<p>Primary source of crude palm oil</p>
+					</div>
+					<div class="card text-center">
+						<h3 class="text-highlight">Indonesia</h3>
+						<p>30% of Imports</p>
+						<p>150,000 MT annually</p>
+						<p>Source of refined products</p>
+					</div>
+					<div class="card text-center">
+						<h3 class="text-highlight">Others</h3>
+						<p>10% of Imports</p>
+						<p>50,000 MT annually</p>
+						<p>Various African countries</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Market Potential Calculator -->
+			<section class="container">
+				<div class="card">
+					<h2>Investment Potential Calculator</h2>
+					<p>Estimate the potential return on investment for bridging the supply gap:</p>
+					<form id="investment-calculator">
+						<div class="form-row">
+							<div class="form-group">
+								<label for="investment-amount">Investment Amount (USD):</label>
+								<input type="number" id="investment-amount" min="10000" step="10000" value="100000" required />
+								<small>Minimum: $10,000</small>
+							</div>
+							<div class="form-group">
+								<label for="production-capacity">Target Production Capacity (MT/year):</label>
+								<input type="number" id="production-capacity" min="100" step="100" value="1000" required />
+								<small>Annual production target</small>
+							</div>
+							<div class="form-group">
+								<label for="market-price">Market Price per MT (USD):</label>
+								<input type="number" id="market-price" min="500" step="10" value="800" required />
+								<small>Current market price</small>
+							</div>
+						</div>
+						<button type="submit" class="btn">Calculate Potential Return</button>
+					</form>
+					<div id="calculator-result" class="card" style="background-color: var(--color-background); margin-top: 1rem; display: none;">
+						<!-- Results will be displayed here -->
+					</div>
+				</div>
+			</section>
+
+			<!-- Data Insights -->
+			<section class="container">
+				<div class="card">
+					<h2>Key Insights</h2>
+					<div class="grid-2">
+						<div>
+							<h3>📈 Growing Demand</h3>
+							<p>
+								Domestic consumption is growing at 5% annually due to population growth and increasing food
+								processing industry demand.
+							</p>
+						</div>
+						<div>
+							<h3>🏭 Processing Capacity</h3>
+							<p>
+								Current processing capacity utilization is only 60%, indicating significant room for efficiency
+								improvements.
+							</p>
+						</div>
+						<div>
+							<h3>💰 Import Substitution</h3>
+							<p>
+								Bridging the supply gap could save Nigeria $6 billion annually in foreign exchange and create
+								thousands of jobs.
+							</p>
+						</div>
+						<div>
+							<h3>🌍 Export Potential</h3>
+							<p>
+								With improved quality and certification, Nigeria could regain export markets in West Africa and
+								beyond.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Footer -->
+		<footer class="site-footer">
+			<div class="container">
+				<div class="footer-column">
+					<h4>TRGH</h4>
+					<p>The Red Gold Hub</p>
+					<p>Nigeria's Palm Oil Industry Resource</p>
+				</div>
+				<div class="footer-column">
+					<h4>Quick Links</h4>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="history.html">History</a></li>
+						<li><a href="data.html">Supply Data</a></li>
+						<li><a href="technology.html">Technology</a></li>
+					</ul>
+				</div>
+				<div class="footer-column">
+					<h4>Resources</h4>
+					<ul>
+						<li><a href="contact.html">Contact Us</a></li>
+						<li><a href="references.html">References</a></li>
+					</ul>
+				</div>
+				<div class="footer-column">
+					<h4>Connect</h4>
+					<p>John Joshua</p>
+					<p>BYU-Idaho</p>
+					<p>WDD 131</p>
+				</div>
+			</div>
+			<div class="container" style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+				<p>&copy; <span id="currentyear"></span> John Joshua | The Red Gold Hub | Last Modified: <span id="lastModified"></span></p>
+			</div>
+		</footer>
+	</body>
+</html>
