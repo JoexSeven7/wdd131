@@ -226,7 +226,7 @@ section {
    ============================================ */
 
 .hero {
-	background: linear-gradient(135deg, var(--color-button) 0%, #3d5a34 100%);
+	background: linear-gradient(135deg, var(--color-button) 0%, #3d5a3456 100%);
 	color: var(--color-white);
 	padding: var(--spacing-xxl) 0;
 	text-align: center;
@@ -235,8 +235,8 @@ section {
 .hero-image {
 	width: 100%;
 	height: auto;
-	max-height: 300px;
-	object-fit: cover;
+    max-height: 600px;
+	object-fit: contain;
 	border-radius: var(--radius-lg);
 	margin-bottom: var(--spacing-md);
 }
@@ -662,16 +662,16 @@ section {
 /* Section headers with decorative elements */
 .section-header {
 	text-align: center;
-	margin-bottom: var(--spacing-xl);
+	margin-top: var(--spacing-xl);
 }
 
 .section-header::after {
 	content: "";
 	display: block;
 	width: 80px;
-	height: 4px;
+	height: 2px;
 	background: linear-gradient(90deg, var(--color-button), var(--color-highlight));
-	margin: var(--spacing-md) auto 0;
+	margin: var(--spacing-sm) auto 0;
 	border-radius: 2px;
 }
 

@@ -56,13 +56,20 @@
 			<!-- Hero Section -->
 			<section class="hero">
 				<div class="container">
-					<img
-						src="https://images.unsplash.com/photo-1595855709915-277d9c8c8a2d?w=1200&h=600&fit=crop"
-						alt="Palm oil plantation in Nigeria"
-						class="hero-image"
-						loading="lazy"
-						width="1200"
-						height="600" />
+					<picture>
+                        <source srcset='images/palmwebp.webp 800w,
+                        images/palm.webp 1200w,
+                        images/palmlarge.webp 1920w'
+                        sizes='(max-width: 599px) 800px,
+                        (max-width: 1023px) 1200px,
+                        1920px'
+                        type='images/webp'>
+                        <img src='images/plamplantation1.jpg' alt='palm oil'
+                        class='hero-image'
+                        width='1920'
+                        height='800'>
+
+                    </picture>
 					<h1>The Red Gold Hub</h1>
 					<p>
 						Revitalizing Nigeria's palm oil industry through innovation, technology, and sustainable practices.
