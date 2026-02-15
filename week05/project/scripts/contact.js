@@ -25,22 +25,16 @@ function validateEmail(email) {
 	return emailRegex.test(email);
 }
 
-/**
- * Validate phone number (Nigeria format)
- * @param {string} phone - Phone number to validate
- * @returns {boolean} True if valid
- */
+//Validate phone number (Nigeria format)
+
 function validatePhone(phone) {
 	if (!phone) return true; // Phone is optional
 	const phoneRegex = /^(\+234|0)?[789]\d{9}$/;
 	return phoneRegex.test(phone.replace(/\s/g, ""));
 }
 
-/**
- * Validate form field
- * @param {HTMLInputElement} field - The input field to validate
- * @returns {Object} Validation result with isValid and message
- */
+//Validate form field
+
 function validateField(field) {
 	const value = field.value.trim();
 	const fieldName = field.name;
@@ -100,11 +94,8 @@ function validateField(field) {
 	return result;
 }
 
-/**
- * Get field label from field name
- * @param {string} fieldName - The field name
- * @returns {string} Human-readable label
- */
+//Get field label from field name
+ 
 function getFieldLabel(fieldName) {
 	const labels = {
 		fullName: "Full name",
@@ -118,11 +109,8 @@ function getFieldLabel(fieldName) {
 	return labels[fieldName] || fieldName;
 }
 
-/**
- * Validate entire form
- * @param {HTMLFormElement} form - The form to validate
- * @returns {boolean} True if form is valid
- */
+//Validate entire form
+
 function validateForm(form) {
 	const fields = form.querySelectorAll("input, select, textarea");
 	let isValid = true;
@@ -139,10 +127,8 @@ function validateForm(form) {
 	return isValid;
 }
 
-/**
- * Clear form validation errors
- * @param {HTMLFormElement} form - The form to clear errors from
- */
+//Clear form validation errors
+ 
 function clearFormErrors(form) {
 	const fields = form.querySelectorAll("input, select, textarea");
 	fields.forEach((field) => {
@@ -159,11 +145,8 @@ function clearFormErrors(form) {
 // Form Submission Functions
 // ============================================
 
-/**
- * Collect form data
- * @param {HTMLFormElement} form - The form to collect data from
- * @returns {Object} Form data object
- */
+// Collect form data
+ 
 function collectFormData(form) {
 	const formData = new FormData(form);
 	const data = {};
@@ -183,10 +166,8 @@ function collectFormData(form) {
 	return data;
 }
 
-/**
- * Handle form submission
- * @param {Event} event - Form submit event
- */
+// Handle form submission
+
 function handleFormSubmit(event) {
 	event.preventDefault();
 
@@ -251,10 +232,8 @@ function addRealTimeValidation() {
 // Accordion Functions
 // ============================================
 
-/**
- * Toggle accordion item
- * @param {HTMLElement} header - The accordion header
- */
+//Toggle accordion item
+
 function toggleAccordion(header) {
 	const content = header.nextElementSibling;
 	const icon = header.querySelector(".accordion-icon");

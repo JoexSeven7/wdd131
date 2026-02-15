@@ -82,6 +82,22 @@ h3 {
 	padding: var(--spacing-md);
 }
 
+.tabs {
+    flex-direction: column;
+    border-bottom: none;
+}
+
+.tab-button {
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+}
+
+css
+
+
+
+
 /* Grid layouts become single column */
 .grid-2,
 .grid-3,

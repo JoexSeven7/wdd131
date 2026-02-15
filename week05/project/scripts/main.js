@@ -17,18 +17,14 @@ const navLinks = document.querySelectorAll(".main-nav a");
 // Utility Functions
 // ============================================
 
-/**
- * Get the current year
- * @returns {number} The current year
- */
+//Get the current year
+
 function getCurrentYear() {
 	return new Date().getFullYear();
 }
 
-/**
- * Get the last modified date of the document
- * @returns {string} Formatted last modified date
- */
+//Get the last modified date of the document
+
 function getLastModifiedDate() {
 	return document.lastModified;
 }
@@ -85,11 +81,9 @@ function setActiveNavLink() {
 // localStorage Functions
 // ============================================
 
-/**
- * Save data to localStorage
- * @param {string} key - The key to store the data under
- * @param {*} value - The value to store
- */
+
+// Save data to localStorage
+ 
 function saveToLocalStorage(key, value) {
 	try {
 		localStorage.setItem(key, JSON.stringify(value));
@@ -98,11 +92,8 @@ function saveToLocalStorage(key, value) {
 	}
 }
 
-/**
- * Retrieve data from localStorage
- * @param {string} key - The key to retrieve
- * @returns {*} The stored value or null if not found
- */
+//  Retrieve data from localStorage
+
 function getFromLocalStorage(key) {
 	try {
 		const item = localStorage.getItem(key);
@@ -113,10 +104,9 @@ function getFromLocalStorage(key) {
 	}
 }
 
-/**
- * Remove data from localStorage
- * @param {string} key - The key to remove
- */
+
+//  Remove data from localStorage
+ 
 function removeFromLocalStorage(key) {
 	try {
 		localStorage.removeItem(key);
@@ -140,10 +130,9 @@ function clearLocalStorage() {
 // Page Visit Counter (using localStorage)
 // ============================================
 
-/**
- * Increment and return page visit count
- * @returns {number} The current visit count
- */
+
+//Increment and return page visit count
+
 function incrementPageVisitCount() {
 	const visitCount = getFromLocalStorage("pageVisitCount") || 0;
 	const newCount = visitCount + 1;
@@ -151,10 +140,8 @@ function incrementPageVisitCount() {
 	return newCount;
 }
 
-/**
- * Get the page visit count
- * @returns {number} The current visit count
- */
+// Get the page visit count
+
 function getPageVisitCount() {
 	return getFromLocalStorage("pageVisitCount") || 0;
 }
@@ -171,18 +158,15 @@ function displayVisitCount() {
 // Theme Preference (using localStorage)
 // ============================================
 
-/**
- * Save theme preference
- * @param {string} theme - The theme to save ('light' or 'dark')
- */
+
+// Save theme preference
+
 function saveThemePreference(theme) {
 	saveToLocalStorage("themePreference", theme);
 }
 
-/**
- * Get theme preference
- * @returns {string} The saved theme or 'light' as default
- */
+//Get theme preference
+
 function getThemePreference() {
 	return getFromLocalStorage("themePreference") || "light";
 }
@@ -191,11 +175,9 @@ function getThemePreference() {
 // Form Data Storage (using localStorage)
 // ============================================
 
-/**
- * Save form data to localStorage
- * @param {string} formName - The name/identifier of the form
- * @param {Object} formData - The form data to save
- */
+
+//Save form data to localStorage
+
 function saveFormData(formName, formData) {
 	const existingData = getFromLocalStorage("formData") || {};
 	existingData[formName] = {
@@ -205,11 +187,9 @@ function saveFormData(formName, formData) {
 	saveToLocalStorage("formData", existingData);
 }
 
-/**
- * Retrieve form data from localStorage
- * @param {string} formName - The name/identifier of the form
- * @returns {Object|null} The saved form data or null
- */
+
+//Retrieve form data from localStorage
+ 
 function getFormData(formName) {
 	const allFormData = getFromLocalStorage("formData");
 	if (allFormData && allFormData[formName]) {
@@ -317,71 +297,52 @@ const technologyCategories = [
 // Array Methods Demonstrations
 // ============================================
 
-/**
- * Filter production data by year range
- * @param {number} startYear - Starting year
- * @param {number} endYear - Ending year
- * @returns {Array} Filtered production data
- */
+// Filter production data by year range
+
 function filterProductionByYear(startYear, endYear) {
 	return productionDataArray.filter((data) => data.year >= startYear && data.year <= endYear);
 }
 
-/**
- * Get total production across all years
- * @returns {number} Total production
- */
+//Get total production across all years
+
 function getTotalProduction() {
 	return productionDataArray.reduce((total, data) => total + data.production, 0);
 }
 
-/**
- * Get average import cost
- * @returns {number} Average import cost
- */
+//Get average import cost
+
 function getAverageImportCost() {
 	const totalCost = productionDataArray.reduce((total, data) => total + data.importCost, 0);
 	return totalCost / productionDataArray.length;
 }
 
-/**
- * Find production data for a specific year
- * @param {number} year - The year to find
- * @returns {Object|null} The production data or null
- */
+//Find production data for a specific year
+ 
 function findProductionByYear(year) {
 	return productionDataArray.find((data) => data.year === year) || null;
 }
 
-/**
- * Get all years from production data
- * @returns {Array} Array of years
- */
+//Get all years from production data
+ 
 function getAllYears() {
 	return productionDataArray.map((data) => data.year);
 }
 
-/**
- * Check if any year has production above threshold
- * @param {number} threshold - The threshold to check
- * @returns {boolean} True if any year exceeds threshold
- */
+//Check if any year has production above threshold
+ 
 function hasProductionAboveThreshold(threshold) {
 	return productionDataArray.some((data) => data.production > threshold);
 }
 
-/**
- * Check if all years have positive production
- * @returns {boolean} True if all years have positive production
- */
+//Check if all years have positive production
+ 
 function allYearsHavePositiveProduction() {
 	return productionDataArray.every((data) => data.production > 0);
 }
 
-/**
- * Sort production data by year (descending)
- * @returns {Array} Sorted production data
- */
+
+// Sort production data by year (descending)
+ 
 function sortProductionByYearDesc() {
 	return [...productionDataArray].sort((a, b) => b.year - a.year);
 }
@@ -390,31 +351,24 @@ function sortProductionByYearDesc() {
 // Template Literals Usage
 // ============================================
 
-/**
- * Generate production summary string
- * @param {Object} data - Production data object
- * @returns {string} Formatted summary string
- */
+
+//Generate production summary string
+
 function generateProductionSummary(data) {
 	return `In ${data.year}, Nigeria produced ${formatNumber(data.production)} metric tons of palm oil, 
 	consumed ${formatNumber(data.consumption)} metric tons, and imported ${formatNumber(data.imports)} metric tons 
 	at a cost of $${formatNumber(data.importCost)}. The supply gap was ${formatNumber(data.gap)} metric tons.`;
 }
 
-/**
- * Format large numbers with commas
- * @param {number} num - The number to format
- * @returns {string} Formatted number string
- */
+
+//Format large numbers with commas
+
 function formatNumber(num) {
 	return num.toLocaleString();
 }
 
-/**
- * Generate technology category HTML
- * @param {Object} category - Technology category object
- * @returns {string} HTML string
- */
+//Generate technology category HTML
+ 
 function generateTechnologyCategoryHTML(category) {
 	const technologiesHTML = category.technologies
 		.map(
@@ -441,11 +395,9 @@ function generateTechnologyCategoryHTML(category) {
 // Conditional Branching Examples
 // ============================================
 
-/**
- * Get production status message
- * @param {number} production - Production amount
- * @returns {string} Status message
- */
+
+// Get production status message
+
 function getProductionStatus(production) {
 	if (production >= 1500000) {
 		return "Excellent - Meeting domestic demand";
@@ -460,11 +412,9 @@ function getProductionStatus(production) {
 	}
 }
 
-/**
- * Get investment recommendation
- * @param {number} budget - Investment budget
- * @returns {string} Investment recommendation
- */
+
+//Get investment recommendation
+
 function getInvestmentRecommendation(budget) {
 	if (budget >= 10000000) {
 		return "Consider investing in large-scale processing mills (30-60 tons/hour capacity)";
@@ -479,21 +429,16 @@ function getInvestmentRecommendation(budget) {
 	}
 }
 
-/**
- * Validate email format
- * @param {string} email - Email address to validate
- * @returns {boolean} True if valid
- */
+//Validate email format
+ 
 function validateEmail(email) {
 	const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 	return emailRegex.test(email);
 }
 
-/**
- * Validate phone number (Nigeria format)
- * @param {string} phone - Phone number to validate
- * @returns {boolean} True if valid
- */
+
+//Validate phone number (Nigeria format)
+
 function validatePhone(phone) {
 	const phoneRegex = /^(\+234|0)?[789]\d{9}$/;
 	return phoneRegex.test(phone.replace(/\s/g, ""));

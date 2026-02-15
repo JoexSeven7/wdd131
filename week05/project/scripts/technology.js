@@ -14,10 +14,8 @@ const tabPanels = document.querySelectorAll(".tab-panel");
 // Tab Management Functions
 // ============================================
 
-/**
- * Switch to a specific tab
- * @param {string} tabId - The ID of the tab to switch to
- */
+//Switch between technology tabs
+
 function switchTab(tabId) {
 	// Remove active class from all buttons
 	tabButtons.forEach((button) => {
@@ -188,11 +186,7 @@ const technologyData = {
 // Technology Display Functions
 // ============================================
 
-/**
- * Generate technology card HTML
- * @param {Object} tech - Technology object
- * @returns {string} HTML string
- */
+
 function generateTechnologyCard(tech) {
 	const benefitsList = tech.benefits
 		.map((benefit) => `<li>${benefit}</li>`)
@@ -210,10 +204,9 @@ function generateTechnologyCard(tech) {
 	`;
 }
 
-/**
- * Display technologies for a category
- * @param {string} categoryId - Category ID
- */
+
+//  Display technologies for a category
+
 function displayTechnologies(categoryId) {
 	const category = technologyData[categoryId];
 	if (!category) return;
@@ -244,10 +237,9 @@ function displayAllTechnologies() {
 // Technology Comparison Functions
 // ============================================
 
-/**
- * Get technology comparison data
- * @returns {Array} Comparison data array
- */
+
+//  Get technology comparison data
+
 function getTechnologyComparison() {
 	return [
 		{
@@ -316,10 +308,10 @@ function displayTechnologyComparison() {
 // Investment Opportunity Functions
 // ============================================
 
-/**
- * Get investment opportunities data
- * @returns {Array} Investment opportunities array
- */
+
+
+//Get investment opportunities data
+
 function getInvestmentOpportunities() {
 	return [
 		{

@@ -30,11 +30,8 @@ const productionData = [
 // Utility Functions
 // ============================================
 
-/**
- * Format number with commas and K/M/B suffixes
- * @param {number} num - Number to format
- * @returns {string} Formatted number
- */
+//Format number with commas and K/M/B suffixes
+
 function formatMetric(num) {
 	if (num >= 1000000000) {
 		return `$${(num / 1000000000).toFixed(1)}B`;
@@ -46,20 +43,15 @@ function formatMetric(num) {
 	return num.toString();
 }
 
-/**
- * Format number with commas
- * @param {number} num - Number to format
- * @returns {string} Formatted number
- */
+//Format number with commas
+ 
 function formatNumber(num) {
 	return num.toLocaleString();
 }
 
-/**
- * Format currency
- * @param {number} amount - Amount to format
- * @returns {string} Formatted currency
- */
+
+//Format currency
+
 function formatCurrency(amount) {
 	return `$${formatNumber(amount)}`;
 }
@@ -68,11 +60,9 @@ function formatCurrency(amount) {
 // Data Filtering Functions
 // ============================================
 
-/**
- * Filter data by selected year
- * @param {string} selectedYear - The year to filter by
- * @returns {Array} Filtered data array
- */
+
+//Filter data by selected year
+ 
 function filterDataByYear(selectedYear) {
 	if (selectedYear === "all") {
 		return productionData;
@@ -80,10 +70,8 @@ function filterDataByYear(selectedYear) {
 	return productionData.filter((data) => data.year.toString() === selectedYear);
 }
 
-/**
- * Display filtered data
- * @param {Array} data - Data array to display
- */
+// Display filtered data
+ 
 function displayFilteredData(data) {
 	if (!filteredDataDisplay) return;
 
@@ -127,10 +115,9 @@ function displayFilteredData(data) {
 // Table Population Functions
 // ============================================
 
-/**
- * Populate the production table with data
- * @param {Array} data - Data array to populate
- */
+
+// Populate the production table with data
+
 function populateProductionTable(data) {
 	if (!productionTableBody) return;
 
@@ -168,13 +155,10 @@ function initProductionTable() {
 // Investment Calculator Functions
 // ============================================
 
-/**
- * Calculate investment potential
- * @param {number} investment - Investment amount
- * @param {number} capacity - Production capacity
- * @param {number} price - Market price per metric ton
- * @returns {Object} Calculation results
- */
+
+
+//Calculate investment potential
+ 
 function calculateInvestmentPotential(investment, capacity, price) {
 	// Calculate annual revenue
 	const annualRevenue = capacity * price;
@@ -201,10 +185,9 @@ function calculateInvestmentPotential(investment, capacity, price) {
 	};
 }
 
-/**
- * Display calculator results
- * @param {Object} results - Calculation results
- */
+
+// Display calculator results
+
 function displayCalculatorResults(results) {
 	if (!calculatorResult) return;
 
@@ -234,10 +217,8 @@ function displayCalculatorResults(results) {
 	});
 }
 
-/**
- * Handle investment calculator form submission
- * @param {Event} event - Form submit event
- */
+// Handle investment calculator form submission
+ 
 function handleCalculatorSubmit(event) {
 	event.preventDefault();
 
@@ -246,8 +227,8 @@ function handleCalculatorSubmit(event) {
 	const price = parseFloat(document.getElementById("market-price").value);
 
 	// Validate inputs
-	if (isNaN(investment) || investment < 10000) {
-		alert("Please enter a valid investment amount (minimum $10,000).");
+	if (isNaN(investment) || investment < 100) {
+		alert("Please enter a valid investment amount (minimum $100).");
 		return;
 	}
 
@@ -270,21 +251,16 @@ function handleCalculatorSubmit(event) {
 // Data Analysis Functions
 // ============================================
 
-/**
- * Calculate year-over-year growth rate
- * @param {number} currentYear - Current year value
- * @param {number} previousYear - Previous year value
- * @returns {number} Growth rate percentage
- */
+
+// Calculate year-over-year growth rate
+
 function calculateGrowthRate(currentYear, previousYear) {
 	if (previousYear === 0) return 0;
 	return ((currentYear - previousYear) / previousYear) * 100;
 }
 
-/**
- * Get production trend analysis
- * @returns {Object} Trend analysis results
- */
+//Get production trend analysis
+ 
 function getProductionTrendAnalysis() {
 	const sortedData = [...productionData].sort((a, b) => a.year - b.year);
 	const growthRates = [];
@@ -305,10 +281,8 @@ function getProductionTrendAnalysis() {
 	};
 }
 
-/**
- * Get import dependency analysis
- * @returns {Object} Import dependency results
- */
+//Get import dependency analysis
+
 function getImportDependencyAnalysis() {
 	const totalConsumption = productionData.reduce((sum, item) => sum + item.consumption, 0);
 	const totalImports = productionData.reduce((sum, item) => sum + item.imports, 0);
